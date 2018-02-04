@@ -1,0 +1,38 @@
+---
+layout: default
+subtitle: Designer | Developer | Streamer
+bg-image: core/banner-bg.jpg
+---
+
+<div id="banner-text">
+    <h1 class="title" id="dynamic-style">{{site.title}}</h1>
+    <hr>
+    <h2 class="subtitle">{{page.subtitle}}</h2>
+</div>
+</section>
+
+<section class="container cards">
+    {% for post in paginator.posts %}
+    <div class="card">
+      <img class="card-img-top" src="{{base.url}}/assets/images/{{post.thumbnail}}" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">{{post.date | date: "%D"}} &bull; {{post.author}} &bull; {{post.category}}</p>
+        <h5 class="card-title"><a href="{{post.url}}">{{post.title}}</a></h5>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+<nav aria-label="Post pagination">
+  <ul class="pagination">
+    {% if paginator.previous_page %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path }}"><<</a></li>
+    {% endif %}
+   
+    <li class="page-item"><a class="page-link current" href="#">{{paginator.page}}</a></li>
+
+    {% if paginator.next_page %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path }}">>></a></li>
+    {% endif %}
+  </ul>
+</nav>

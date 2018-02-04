@@ -1,0 +1,8 @@
+# Site settings
+title: Taylor Page
+url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+plugins: ["jekyll-paginate"]
+paginate: 4
+
+
+exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]

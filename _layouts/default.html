@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+	<section id="banner" style="background: url({{base.url}}/assets/images/{{page.bg-image}})">
+		<header>
+			<div class="navbar-header">      
+				<img src="{{base.url}}/assets/images/core/TP.svg" alt="A logo of my initals TP" class="logo responive-img">
+			</div>
+			<nav>
+				<button class="nav-icon" id="navSelector" onclick="openMenu()"></button>
+				<ul id="side-menu">
+					<li><a href="{{base.url}}/index.html">Home</a></li>
+					<li><a href="/" class="twitchHover">Twitch</a></li>
+					<li><a href="https://www.behance.net/tpage938ae06">Portfolio</a></li>
+					<li><a href="{{base.url}}/contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		{{content}}
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/913ffba368.js"></script>
+<script src="{{base.url}}/assets/js/custom.js"></script> 
+</body>
+</html>
