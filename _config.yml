@@ -1,6 +1,6 @@
 # Site settings
 title: Taylor Page
-url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+baseurl: "taylorpage.tk"
 plugins: ["jekyll-paginate"]
 paginate: 4
 
